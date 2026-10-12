@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Feliz Aniversário, Stephan! 🖤</title>
+  <meta name="description"
+    content="Uma homenagem especial e romântica de aniversário para Stephan criada com todo o amor por Laura." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- =================== ÁUDIO =================== -->
+  <audio id="bg-music" preload="auto" loop>
+    <source src="James Arthur  Say You Wont Let Go.m4a" type="audio/mp4" />
+    <source src="James Arthur  Say You Wont Let Go.m4a" type="audio/x-m4a" />
+    <source src="musica.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- =================== TOP BAR =================== -->
+  <header class="top-bar" id="top-bar">
+    <button class="top-btn back-btn" id="back-btn" onclick="goToPrevPage()" aria-label="Voltar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6" />
+      </svg>
+    </button>
+    <div class="page-counter" id="page-counter">1 / 6</div>
+    <div class="top-right-btns">
+      <button class="top-btn music-btn" id="music-btn" onclick="toggleMusic()" aria-label="Música">
+        <svg id="music-icon-on" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" style="display:none;">
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+        <svg id="music-icon-off" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+          <line x1="1" y1="1" x2="23" y2="23" stroke-width="2.5" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- =================== PÁGINAS =================== -->
+  <main class="pages-container" id="pages-container">
+
+    <!-- ===== PÁGINA 1: A SURPRESA COMERA (HERO) ===== -->
+    <section class="page page-hero active" id="page-1" data-page="1">
+      <div class="hero-bg">
+        <img src="hero.jpg" alt="" class="hero-bg-img" id="hero-bg-img" />
+        <div class="hero-gradient"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-tag">UMA HOMENAGEM ESPECIAL</div>
+        <h1 class="hero-title">
+          Feliz aniversário,<br>
+          <span class="hero-name">Stephan.</span>
+        </h1>
+        <p class="hero-sub">Hoje o mundo celebra a tua vida, mas o meu coração celebra a bênção de ter-te ao meu lado. Esta surpresa foi criada com todo o meu amor, só para ti.</p>
+        <button class="btn-primary" onclick="goToPage(2)">
+          <span>COMEÇAR A SURPRESA</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <div class="hero-heart-bottom">♡</div>
+    </section>
+
+    <!-- ===== PÁGINA 2: UMA CARTA PARA TI ===== -->
+    <section class="page page-carta" id="page-2" data-page="2">
+      <div class="page-inner">
+        <div class="envelope-wrapper" id="envelope-wrapper" onclick="openEnvelope()">
+          <div class="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-paper">
+              <div class="letter-content" id="letter-content">
+                <p class="letter-salutation">Meu amor,</p>
+                <p class="letter-body-text">
+                  Não existem palavras suficientes no mundo para descrever tudo o que sinto por ti, Stephan. 
+                  Tu iluminas os meus dias com o teu sorriso, a tua força e a tua presença marcante. 
+                  Cada momento ao teu lado é um presente valioso que guardo no fundo do coração.
+                </p>
+                <p class="letter-body-text">
+                  Hoje quero que saibas: tu és a melhor escolha que já fiz e a melhor coisa que me aconteceu. 
+                  Obrigada por seres quem és, por me amares incondicionalmente e por me fazeres tão feliz.
+                </p>
+                <p class="letter-closing">Com todo o meu amor,<br><span class="letter-sign">da tua Laura 💋</span></p>
+              </div>
+            </div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+          </div>
+        </div>
+
+        <div class="carta-text-area" id="carta-text-area">
+          <div class="carta-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M22 7l-10 7L2 7" />
+            </svg>
+          </div>
+          <h2 class="carta-title">Uma carta para ti</h2>
+          <p class="carta-sub">Há palavras que não se dizem no dia a dia. Esta carta é uma forma de te dizer tudo o que sinto e admiro em ti, meu amor.</p>
+          <button class="btn-primary" id="btn-abrir-carta" onclick="openEnvelope()">
+            <span id="btn-carta-label">ABRIR CARTA</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PÁGINA 3: A NOSSA HISTÓRIA ===== -->
+    <section class="page page-historia" id="page-3" data-page="3">
+      <div class="page-inner">
+        <div class="historia-header">
+          <h2 class="section-title-main">A nossa história</h2>
+          <p class="section-sub-text">Cada momento contigo é um capítulo inesquecível. Aqui estão algumas lembranças nossas que guardo com todo o carinho.</p>
+        </div>
+
+        <div class="photo-collage" id="photo-collage">
+          <div class="polaroid polaroid-1" onclick="openPhotoModal('foto1.jpg', 'Nós dois ♡', 'Onde o tempo parece parar quando estou contigo, Stephan.')" title="Clique para ampliar">
+            <div class="polaroid-pin"></div>
+            <div class="polaroid-img-wrap">
+              <img src="foto1.jpg" alt="Nós dois" loading="lazy" />
+            </div>
+            <p class="polaroid-caption">Nós dois ♡</p>
+          </div>
+          <div class="polaroid polaroid-2" onclick="openPhotoModal('foto2.jpg', 'O teu sorriso ✨', 'Aquele teu olhar que ilumina tudo e me apaixona todos os dias.')" title="Clique para ampliar">
+            <div class="polaroid-pin"></div>
+            <div class="polaroid-img-wrap">
+              <img src="foto2.jpg" alt="O teu sorriso" loading="lazy" />
+            </div>
+            <p class="polaroid-caption">O teu sorriso ✨</p>
+          </div>
+          <div class="polaroid polaroid-3" onclick="openPhotoModal('foto3.jpg', 'Para sempre nós 🖤', 'Segurando a tua mão, sei que temos o mundo inteiro pela frente.')" title="Clique para ampliar">
+            <div class="polaroid-pin"></div>
+            <div class="polaroid-img-wrap">
+              <img src="foto3.jpg" alt="De mãos dadas" loading="lazy" />
+            </div>
+            <p class="polaroid-caption">Para sempre nós 🖤</p>
+          </div>
+        </div>
+
+        <p class="historia-script">Juntos, tudo é melhor</p>
+        <p class="photo-hint">Toque nas fotos para ver de perto</p>
+      </div>
+    </section>
+
+    <!-- ===== PÁGINA 4: O QUE TORNA STEPHAN ESPECIAL ===== -->
+    <section class="page page-qualidades" id="page-4" data-page="4">
+      <div class="page-inner">
+        <div class="qualidades-header">
+          <div class="qualidades-crown">👑</div>
+          <h2 class="section-title-main">O que torna<br><span class="gold-text">Stephan</span> especial</h2>
+          <p class="section-sub-text">Toque nos cartões abaixo para descobrir por que és o homem mais incrível do mundo para mim.</p>
+        </div>
+
+        <div class="qualidades-grid" id="qualidades-grid">
+          <!-- Cartões interativos gerados via JS com virada 3D e mensagens reveladas -->
+        </div>
+
+        <div class="qualidades-footer">
+          <p class="script-text">Estas são apenas algumas das razões pelas quais és tão especial para mim.<br>És incrível, Stephan! ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PÁGINA 5: FAZ UM PEDIDO ===== -->
+    <section class="page page-pedido" id="page-5" data-page="5">
+      <div class="pedido-bg">
+        <img src="bolo.jpg" alt="Bolo de aniversário" class="pedido-bg-img" id="pedido-bg-img" />
+        <div class="pedido-gradient"></div>
+      </div>
+      <div class="pedido-content">
+        <h2 class="pedido-title">Faz um pedido, meu amor</h2>
+        <p class="pedido-sub">Sopra as velas e celebra este novo ciclo. Que venham mais conquistas, saúde, sorrisos e momentos inesquecíveis juntos!</p>
+        <button class="btn-primary btn-celebrar" onclick="celebrar()">
+          <span>🎂 CELEBRAR STEPHAN</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== PÁGINA 6: A ÚLTIMA SURPRESA ===== -->
+    <section class="page page-final" id="page-6" data-page="6">
+      <div class="page-inner final-inner">
+        <div class="final-heart-icon">♡</div>
+        <h2 class="final-title-main">A última surpresa</h2>
+        <p class="final-sub-intro">Esta é a minha declaração de amor e os meus desejos para ti.</p>
+
+        <!-- Foto de destaque do casal -->
+        <div class="final-couple-photo" onclick="openPhotoModal('foto4.jpg', 'Tu e eu, Stephan', 'Caminhar ao teu lado é o meu maior presente de todos os dias.')" title="Clique para ampliar">
+          <div class="final-photo-frame">
+            <img src="foto4.jpg" alt="Foto do casal ao pôr do sol" class="final-photo-img" />
+            <div class="final-photo-border"></div>
+          </div>
+          <p class="final-photo-caption">Tu e eu, hoje e sempre 🖤</p>
+        </div>
+
+        <div class="final-letter-card">
+          <p class="final-letter-salutation">Meu amor,</p>
+          <p class="final-letter-text">
+            Que este novo ano de vida te traga ainda mais paz, saúde, sucesso e tudo o que o teu coração deseja. Tu mereces o mundo inteiro, e eu tenho a imensa sorte de caminhar contigo nesta jornada incrível.
+          </p>
+          <p class="final-letter-text">
+            Feliz aniversário, Stephan.<br>
+            Que nunca te falte motivos para sorrir e ser feliz.
+          </p>
+          <p class="final-letter-sign">
+            Com todo o meu amor, hoje e sempre.<br>
+            <span class="author-name">— Laura ♡</span>
+          </p>
+          <div class="final-letter-ornament">— ♡ —</div>
+        </div>
+
+        <button class="btn-primary btn-voltar" onclick="goToPage(1)">
+          <span>VOLTAR AO INÍCIO</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- =================== MODAL LIGHTBOX DE FOTO =================== -->
+  <div class="photo-modal" id="photo-modal" onclick="closePhotoModal(event)">
+    <div class="photo-modal-content" onclick="event.stopPropagation()">
+      <button class="photo-modal-close" onclick="closePhotoModal()" aria-label="Fechar">✕</button>
+      <div class="photo-modal-img-wrap">
+        <img src="" alt="" id="photo-modal-img" class="photo-modal-img" />
+      </div>
+      <div class="photo-modal-text">
+        <h4 id="photo-modal-title" class="photo-modal-title"></h4>
+        <p id="photo-modal-desc" class="photo-modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== BOTTOM NAV =================== -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <button class="nav-arrow nav-prev" id="nav-prev" onclick="goToPrevPage()" aria-label="Anterior">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M15 18l-6-6 6-6" />
+      </svg>
+    </button>
+    <div class="nav-dots" id="nav-dots">
+      <span class="nav-dot active" data-page="1"></span>
+      <span class="nav-dot" data-page="2"></span>
+      <span class="nav-dot" data-page="3"></span>
+      <span class="nav-dot" data-page="4"></span>
+      <span class="nav-dot" data-page="5"></span>
+      <span class="nav-dot" data-page="6"></span>
+    </div>
+    <button class="nav-arrow nav-next" id="nav-next" onclick="goToNextPage()" aria-label="Próximo">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M9 18l6-6-6-6" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Sparkles globais -->
+  <div class="sparkles" id="sparkles"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
